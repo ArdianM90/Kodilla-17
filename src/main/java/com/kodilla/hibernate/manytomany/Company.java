@@ -5,6 +5,12 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedQueries({
+        @NamedQuery(
+                name = "Company.retrieveCompaniesByFirstThreeLetters",
+                query = "FROM Company WHERE name LIKE :THREE_LETTERS"
+        )
+})
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
