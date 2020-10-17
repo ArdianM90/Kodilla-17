@@ -63,7 +63,7 @@ public class Employee {
         this.lastname = lastname;
     }
 
-    public void setCompanies(List<Company> companies) {
+    private void setCompanies(List<Company> companies) {
         this.companies = companies;
     }
 }
