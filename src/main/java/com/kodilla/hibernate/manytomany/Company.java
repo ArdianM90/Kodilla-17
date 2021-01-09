@@ -9,8 +9,14 @@ import java.util.List;
         @NamedQuery(
                 name = "Company.retrieveCompaniesByFirstThreeLetters",
                 query = "FROM Company WHERE name LIKE :THREE_LETTERS"
+        ),
+        @NamedQuery(
+                name = "Company.retrieveCompaniesByNameFragment",
+                query = "FROM Company WHERE name LIKE :NAME_FRAGMENT"
         )
 })
+
+
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
